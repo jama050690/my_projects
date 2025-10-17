@@ -3,6 +3,7 @@ const numberEl = document.getElementById("number");
 const outputEl = document.getElementById("output");
 
 btnEl.addEventListener("click", function () {
+  event.preventDefault();
   var kiritilganQiymat = numberEl.value.trim();
   if (outputEl.classList.contains("hide")) {
     outputEl.classList.toggle("hide");
