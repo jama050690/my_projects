@@ -3,25 +3,21 @@ const inputEl = document.getElementById("text-input");
 const resultEl = document.getElementById("result");
 
 const isPalendrome = (qiymat) => {
-  const arr = qiymat.split("");
-  const reversed = arr.reverse();
-  const teskariQiymat = reversed.join("");
-  console.log(qiymat, teskariQiymat);
-  return teskariQiymat == qiymat;
+  qiymat = qiymat.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+  var teskariQiymat = qiymat.split("").reverse().join("");
+  return qiymat === teskariQiymat;
 };
 
 btnEl.addEventListener("click", function () {
-  var kiritilganQiymat = inputEl.value;
+  var kiritilganQiymat = inputEl.value.trim();
 
-  let qiymat = kiritilganQiymat.trim().replaceAll("_", "");
-  qiymat = qiymat.toLowerCase();
-  qiymat = qiymat.replaceAll(" ", "");
-
-  if (qiymat.length === 0) {
+  if (kiritilganQiymat.length === 0) {
     alert("Please input a value");
-  } else if (isPalendrome(qiymat)) {
+  }
+
+  if (isPalendrome(kiritilganQiymat)) {
     resultEl.innerText = kiritilganQiymat + " is a palindrome";
   } else {
-    resultEl.innerText = "";
+    resultEl.innerText = kiritilganQiymat + " is not a palindrome";
   }
 });
