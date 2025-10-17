@@ -2,16 +2,17 @@ const btnEl = document.getElementById("convert-btn");
 const numberEl = document.getElementById("number");
 const outputEl = document.getElementById("output");
 
-btnEl.addEventListener("click", function () {
-  event.preventDefault();
-  var kiritilganQiymat = numberEl.value.trim();
+btnEl.addEventListener("click", (e) => {
+  e.preventDefault();
+  var kiritilganQiymat = numberEl.value;
+  const num = parseInt(kiritilganQiymat, 10);
   if (outputEl.classList.contains("hide")) {
     outputEl.classList.toggle("hide");
   }
-  const num = Number(kiritilganQiymat);
+
   let isError = true;
-  if (isNaN(num)) {
-    outputEl.innerText = "Please enter a valid number";
+  if (!kiritilganQiymat || kiritilganQiymat.match(/[e.]/g)) {
+    outputEl.innerText = "Please enter a valid number.";
   } else if (num < 1) {
     outputEl.innerText = "Please enter a number greater than or equal to 1";
   } else if (num > 3999) {
