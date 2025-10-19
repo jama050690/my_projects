@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ol,
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #3b3b4f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.freecodecamp-logo {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+}
+h1 {
+  color: white;
+  margin-bottom: 15px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+}
+.box {
+  width: 250px;
+  height: 460px;
+  margin: 30px auto;
+  border-radius: 15px;
+  border: 15px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phone {
+  width: 100%;
+  height: 25px;
+  background-color: #000000;
+}
+
+.phone-camera {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: auto;
+}
+.input_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e1e1e3;
+  width: 100%;
+  height: 100%;
+}
+label {
+  margin: 10px auto 5px;
+}
+#user-input {
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  height: 42px;
+  font-size: 16px;
+}
+#results-div {
+  font-size: 1.2rem;
+  padding: 5px;
+  text-align: center;
+  margin: 10px 0;
+  color: rgb(0, 71, 27);
+}
+.btns {
+  background-color: black;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-style {
+  cursor: pointer;
+  width: 100px;
+  margin: 10px;
+  color: #0a0a23;
+  font-size: 18px;
+  background-color: #ffffff;
+  background-image: linear-gradient(#ffffff, #928d86);
+  border-color: #ffffff;
+  border-width: 3px;
+}
