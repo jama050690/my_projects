@@ -14,8 +14,9 @@ let cid = [
 const cashEl = document.getElementById("cash");
 const changeEl = document.getElementById("change-due");
 const btnEl = document.getElementById("purchase-btn");
+const drawerEl = document.getElementById("drawer");
 
-const cashDue = (cash) => {
+const cashDue = (cash, price) => {
   if (cash < price) {
     alert("Customer does not have enough money to purchase the item");
     return;
@@ -32,146 +33,84 @@ const cashDue = (cash) => {
   ]);
 
   const balance = cashDrawer.reduce((prev, [_, amount]) => prev + amount, 0);
-  console.log(balance, due, balance < due);
-
   if (balance < due) {
     changeEl.innerHTML = "<p>Status: INSUFFICIENT_FUNDS</p>";
     return;
   }
-  const statusVal = balance == due;
-
+  const statusCheck = balance == due;
   const deductions = {};
   while (due > 0) {
     if (due >= 10000 && cashDrawer[8][1] >= 10000) {
       due -= 10000;
-      if (deductions.hasOwnProperty("HUNDRED")) {
-        deductions.HUNDRED += 100;
-      } else {
-        deductions.HUNDRED = 100;
-      }
+      deductions.HUNDRED = (deductions.HUNDRED || 0) + 100;
       cashDrawer[8][1] -= 10000;
     } else if (due >= 2000 && cashDrawer[7][1] >= 2000) {
       due -= 2000;
-
-      if (deductions.hasOwnProperty("TWENTY")) {
-        deductions.TWENTY += 20;
-      } else {
-        deductions.TWENTY = 20;
-      }
+      deductions.TWENTY = (deductions.TWENTY || 0) + 20;
       cashDrawer[7][1] -= 2000;
     } else if (due >= 1000 && cashDrawer[6][1] >= 1000) {
       due -= 1000;
-      if (deductions.hasOwnProperty("TEN")) {
-        deductions.TEN += 10;
-      } else {
-        deductions.TEN = 10;
-      }
+      deductions.TEN = (deductions.TEN || 0) + 10;
       cashDrawer[6][1] -= 1000;
     } else if (due >= 500 && cashDrawer[5][1] >= 500) {
       due -= 500;
-      if (deductions.hasOwnProperty("FIVE")) {
-        deductions.FIVE += 5;
-      } else {
-        deductions.FIVE = 5;
-      }
+      deductions.FIVE = (deductions.FIVE || 0) + 5;
       cashDrawer[5][1] -= 500;
     } else if (due >= 100 && cashDrawer[4][1] >= 100) {
       due -= 100;
-
-      if (deductions.hasOwnProperty("ONE")) {
-        deductions.ONE += 1;
-      } else {
-        deductions.ONE = 1;
-      }
+      deductions.ONE = (deductions.ONE || 0) + 1;
       cashDrawer[4][1] -= 100;
     } else if (due >= 25 && cashDrawer[3][1] >= 25) {
       due -= 25;
-
-      if (deductions.hasOwnProperty("QUARTER")) {
-        deductions.QUARTER += 0.25;
-      } else {
-        deductions.QUARTER = 0.25;
-      }
+      deductions.QUARTER = (deductions.QUARTER || 0) + 0.25;
       cashDrawer[3][1] -= 25;
     } else if (due >= 10 && cashDrawer[2][1] >= 10) {
       due -= 10;
-
-      if (deductions.hasOwnProperty("DIME")) {
-        deductions.DIME += 0.1;
-      } else {
-        deductions.DIME = 0.1;
-      }
+      deductions.DIME = (deductions.DIME || 0) + 0.1;
       cashDrawer[2][1] -= 10;
     } else if (due >= 5 && cashDrawer[1][1] >= 5) {
       due -= 5;
-
-      if (deductions.hasOwnProperty("NICKEL")) {
-        deductions.NICKEL += 0.05;
-      } else {
-        deductions.NICKEL = 0.05;
-      }
+      deductions.NICKEL = (deductions.NICKEL || 0) + 0.05;
       cashDrawer[1][1] -= 5;
     } else if (due >= 1 && cashDrawer[0][1] >= 1) {
       due -= 1;
-
-      if (deductions.hasOwnProperty("PENNY")) {
-        deductions.PENNY += 0.01;
-      } else {
-        deductions.PENNY = 0.01;
-      }
+      deductions.PENNY = (deductions.PENNY || 0) + 0.01;
       cashDrawer[0][1] -= 1;
     } else {
-      console.log("insuf due: ", due, cashDrawer);
       changeEl.innerHTML = "<p>Status: INSUFFICIENT_FUNDS</p>";
       return;
     }
-    // due = due.toFixed(2);
+    due = Math.round(due);
   }
-  const status = statusVal ? "CLOSED" : "OPEN";
-
+  cid = cashDrawer.map(([curName, amt]) => [curName, amt / 100]);
   const resultStr = `
-   <p>Status: ${status}</p> 
-   <p>${
-     deductions.hasOwnProperty("HUNDRED")
-       ? "HUNDRED: $" + deductions.HUNDRED
-       : ""
-   }</p>
-   <p>${
-     deductions.hasOwnProperty("TWENTY") ? "TWENTY: $" + deductions.TWENTY : ""
-   }</p> 
-   <p>${deductions.hasOwnProperty("TEN") ? "TEN: $" + deductions.TEN : ""}</p> 
-   <p>${
-     deductions.hasOwnProperty("FIVE") ? "FIVE: $" + deductions.FIVE : ""
-   }</p> 
-   <p>${deductions.hasOwnProperty("ONE") ? "ONE: $" + deductions.ONE : ""}</p> 
-   <p>${
-     deductions.hasOwnProperty("QUARTER")
-       ? "QUARTER: $" + deductions.QUARTER.toFixed(2)
-       : ""
-   }</p> 
-   <p>${
-     deductions.hasOwnProperty("DIME")
-       ? "DIME: $" + deductions.DIME.toFixed(2)
-       : ""
-   }</p> 
-   <p>${
-     deductions.hasOwnProperty("NICKEL")
-       ? "NICKEL: $" + deductions.NICKEL.toFixed(2)
-       : ""
-   }</p> 
-   <p>${
-     deductions.hasOwnProperty("PENNY")
-       ? "PENNY: $" + deductions.PENNY.toFixed(2)
-       : ""
-   }
-   </p>`;
+    <p>Status: ${statusCheck ? "CLOSED" : "OPEN"}</p>
+    ${Object.entries(deductions)
+      .map(([name, val]) => `<p>${name}: $${val.toFixed(2)}</p>`)
+      .join("")}
+  `;
 
   changeEl.innerHTML = resultStr;
+  drawerEl.innerHTML = `
+  <div id="drawer">
+             <strong>Change in drawer
+           </strong>
+           <p>Pennies: $${cid[0][1]}</p>
+           <p>Nickels: $${cid[1][1]}</p>
+           <p>Dimes: $${cid[2][1]}</p>
+           <p>Quarters: $${cid[3][1]}</p>
+           <p>Ones: $${cid[4][1]}</p>
+           <p>Fives: $${cid[5][1]}</p>
+           <p>Tens: $${cid[6][1]}</p>
+           <p>Twenties: $${cid[7][1]}</p>
+           <p>Hundreds: $${cid[8][1]} </p>
+       </div>
+  `;
 };
 
 btnEl.addEventListener("click", (e) => {
   e.preventDefault();
-  price = Math.round(price * 100);
   const cash = Math.round(Number(cashEl.value) * 100);
-  cashDue(cash);
+  const pr = Math.round(price * 100);
+  cashDue(cash, pr);
 });
