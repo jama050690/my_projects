@@ -1,4 +1,4 @@
-let price = 1;
+let price = 3.26;
 let cid = [
   ["PENNY", 1.01],
   ["NICKEL", 2.05],
@@ -26,14 +26,12 @@ const cashDue = (cash) => {
 
   let due = cash - price;
 
-  const reversedCid = [...cid].map(([curName, amount]) => [
+  const cashDrawer = [...cid].map(([curName, amount]) => [
     curName,
     Math.round(amount * 100),
   ]);
 
-  const denominations = [10000, 2000, 1000, 500, 100, 25, 10, 5, 1];
-  const results = { status: "OPEN", change: [] };
-  const balance = reversedCid.reduce((prev, [_, amount]) => prev + amount, 0);
+  const balance = cashDrawer.reduce((prev, [_, amount]) => prev + amount, 0);
   console.log(balance, due, balance < due);
 
   if (balance < due) {
@@ -44,15 +42,15 @@ const cashDue = (cash) => {
 
   const deductions = {};
   while (due > 0) {
-    if (due >= 10000 && reversedCid[8][1] >= 10000) {
+    if (due >= 10000 && cashDrawer[8][1] >= 10000) {
       due -= 10000;
       if (deductions.hasOwnProperty("HUNDRED")) {
         deductions.HUNDRED += 100;
       } else {
         deductions.HUNDRED = 100;
       }
-      reversedCid[8][1] -= 10000;
-    } else if (due >= 2000 && reversedCid[7][1] >= 2000) {
+      cashDrawer[8][1] -= 10000;
+    } else if (due >= 2000 && cashDrawer[7][1] >= 2000) {
       due -= 2000;
 
       if (deductions.hasOwnProperty("TWENTY")) {
@@ -60,24 +58,24 @@ const cashDue = (cash) => {
       } else {
         deductions.TWENTY = 20;
       }
-      reversedCid[7][1] -= 2000;
-    } else if (due >= 1000 && reversedCid[6][1] >= 1000) {
+      cashDrawer[7][1] -= 2000;
+    } else if (due >= 1000 && cashDrawer[6][1] >= 1000) {
       due -= 1000;
       if (deductions.hasOwnProperty("TEN")) {
         deductions.TEN += 10;
       } else {
         deductions.TEN = 10;
       }
-      reversedCid[6][1] -= 1000;
-    } else if (due >= 500 && reversedCid[5][1] >= 500) {
+      cashDrawer[6][1] -= 1000;
+    } else if (due >= 500 && cashDrawer[5][1] >= 500) {
       due -= 500;
       if (deductions.hasOwnProperty("FIVE")) {
         deductions.FIVE += 5;
       } else {
         deductions.FIVE = 5;
       }
-      reversedCid[5][1] -= 500;
-    } else if (due >= 100 && reversedCid[4][1] >= 100) {
+      cashDrawer[5][1] -= 500;
+    } else if (due >= 100 && cashDrawer[4][1] >= 100) {
       due -= 100;
 
       if (deductions.hasOwnProperty("ONE")) {
@@ -85,8 +83,8 @@ const cashDue = (cash) => {
       } else {
         deductions.ONE = 1;
       }
-      reversedCid[4][1] -= 100;
-    } else if (due >= 25 && reversedCid[3][1] >= 25) {
+      cashDrawer[4][1] -= 100;
+    } else if (due >= 25 && cashDrawer[3][1] >= 25) {
       due -= 25;
 
       if (deductions.hasOwnProperty("QUARTER")) {
@@ -94,8 +92,8 @@ const cashDue = (cash) => {
       } else {
         deductions.QUARTER = 0.25;
       }
-      reversedCid[3][1] -= 25;
-    } else if (due >= 10 && reversedCid[2][1] >= 10) {
+      cashDrawer[3][1] -= 25;
+    } else if (due >= 10 && cashDrawer[2][1] >= 10) {
       due -= 10;
 
       if (deductions.hasOwnProperty("DIME")) {
@@ -103,8 +101,8 @@ const cashDue = (cash) => {
       } else {
         deductions.DIME = 0.1;
       }
-      reversedCid[2][1] -= 10;
-    } else if (due >= 5 && reversedCid[1][1] >= 5) {
+      cashDrawer[2][1] -= 10;
+    } else if (due >= 5 && cashDrawer[1][1] >= 5) {
       due -= 5;
 
       if (deductions.hasOwnProperty("NICKEL")) {
@@ -112,8 +110,8 @@ const cashDue = (cash) => {
       } else {
         deductions.NICKEL = 0.05;
       }
-      reversedCid[1][1] -= 5;
-    } else if (due >= 1 && reversedCid[0][1] >= 1) {
+      cashDrawer[1][1] -= 5;
+    } else if (due >= 1 && cashDrawer[0][1] >= 1) {
       due -= 1;
 
       if (deductions.hasOwnProperty("PENNY")) {
@@ -121,9 +119,9 @@ const cashDue = (cash) => {
       } else {
         deductions.PENNY = 0.01;
       }
-      reversedCid[0][1] -= 1;
+      cashDrawer[0][1] -= 1;
     } else {
-      console.log("insuf due: ", due, reversedCid);
+      console.log("insuf due: ", due, cashDrawer);
       changeEl.innerHTML = "<p>Status: INSUFFICIENT_FUNDS</p>";
       return;
     }
@@ -133,6 +131,11 @@ const cashDue = (cash) => {
 
   const resultStr = `
    <p>Status: ${status}</p> 
+   <p>${
+     deductions.hasOwnProperty("HUNDRED")
+       ? "HUNDRED: $" + deductions.HUNDRED
+       : ""
+   }</p>
    <p>${
      deductions.hasOwnProperty("TWENTY") ? "TWENTY: $" + deductions.TWENTY : ""
    }</p> 

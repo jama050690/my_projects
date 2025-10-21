@@ -1,15 +1,59 @@
 <html lang="eng">
   <head>
-    <link ="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="text">
-      <label for="cash">Enter cash from customer:</label>
-      <input id="cash" />
-    </div>
-
+    <div class="container">
+      <div>
+        <img
+          class="freecodecamp-logo"
+          src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
+        />
+      </div> 
+      <h1>Cash Register Project</h1>
+      <div id="change-due"></div>
+      <div class="text">
+        <label for="cash">Enter cash from customer:</label>
+        <input id="cash" />
     <button id="purchase-btn">Purchase</button>
-    <div id="change-due"></div>
-    <script src="script.js"></script>
+      </div>
+      <div class="box">
+        <div class="display-registr">
+          <p id="price-screen" class="price-screen">Total: $3.26</p>
+<div class="connector"></div>
+        </div>
+        <div class="top-registry">
+        <div class="button-registry">
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+          <button class="btn"></button>
+        </div>
+        <div class="cash-display-registry">
+           <p><strong>Change in drawer
+           </strong>
+           <p>Pennies: $0.97</p>
+           <p>Nickels: $2.05</p>
+           <p>Dimes: $2.9</p>
+           <p>Quarters: $3.75</p>
+           <p>Ones: $89</p>
+           <p>Fives: $50</p>
+           <p>Tens: $10</p>
+           <p>Twenties: $60</p>
+           <p>Hundreds: $100 </p>
+       </p>
+       </div>
+        </div>
+        <div class="block-circle">
+  <div class="circle"></div>
+      </div>
+      </div>
+    </div>
+  <script src="script.js"></script>
   </body>
 </html>
