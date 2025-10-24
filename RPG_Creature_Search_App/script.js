@@ -28,13 +28,31 @@ searchBtnEl.addEventListener("click", function () {
     spAttackEl.textContent = "90";
     spDefenseEl.textContent = "55";
     speedEl.textContent = "100";
+
     const typeItem = document.createElement("p");
     typeItem.textContent = "FIRE";
     typeItem.style.color = "orange";
     typeItem.style.fontWeight = "bold";
     typesEl.appendChild(typeItem);
+  } else if (qiymat === "aquoroc") {
+    nameEl.textContent = "AQUOROC";
+    idEl.textContent = "#2";
+    weightEl.textContent = "Weight: 220";
+    heightEl.textContent = "Height: 53";
+    hpEl.textContent = "85";
+    attackEl.textContent = "90";
+    defenseEl.textContent = "120";
+    spAttackEl.textContent = "70";
+    spDefenseEl.textContent = "95";
+    speedEl.textContent = "60";
+
+    const typeItem = document.createElement("p");
+    typeItem.textContent = "WATER/ROCK";
+    typeItem.style.color = "blue";
+    typeItem.style.fontWeight = "bold";
+    typesEl.appendChild(typeItem);
   } else {
-    alert("Creature not found");
+    alert("Creature not found!");
 
     nameEl.textContent = "";
     idEl.textContent = "";
