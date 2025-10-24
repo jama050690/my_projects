@@ -10,9 +10,12 @@ const defenseEl = document.getElementById("defense");
 const spAttackEl = document.getElementById("special-attack");
 const spDefenseEl = document.getElementById("special-defense");
 const speedEl = document.getElementById("speed");
+const typesEl = document.getElementById("types");
 
 searchBtnEl.addEventListener("click", function () {
   const qiymat = inputEl.value.trim().toLowerCase();
+
+  typesEl.textContent = "";
 
   if (qiymat === "pyrolynx") {
     nameEl.textContent = "PYROLYNX";
@@ -25,7 +28,6 @@ searchBtnEl.addEventListener("click", function () {
     spAttackEl.textContent = "90";
     spDefenseEl.textContent = "55";
     speedEl.textContent = "100";
-
     const typeItem = document.createElement("p");
     typeItem.textContent = "FIRE";
     typeItem.style.color = "orange";
@@ -33,5 +35,16 @@ searchBtnEl.addEventListener("click", function () {
     typesEl.appendChild(typeItem);
   } else {
     alert("Creature not found");
+
+    nameEl.textContent = "";
+    idEl.textContent = "";
+    weightEl.textContent = "";
+    heightEl.textContent = "";
+    hpEl.textContent = "";
+    attackEl.textContent = "";
+    defenseEl.textContent = "";
+    spAttackEl.textContent = "";
+    spDefenseEl.textContent = "";
+    speedEl.textContent = "";
   }
 });
