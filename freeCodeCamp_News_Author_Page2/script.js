@@ -80,7 +80,7 @@ const avatars = (posters, users) => {
         const userAvatarUrl = avatar.startsWith("/user_avatar/")
           ? avatarUrl.concat(avatar)
           : avatar;
-        return `<img src="${userAvatarUrl}" alt="${user.name}" />`;
+        return `<img src="${userAvatarUrl}" alt="${user.name}"/>`;
       }
     })
     .join("");
@@ -118,7 +118,7 @@ const showLatestPosts = (data) => {
       return `
     <tr>
       <td>
-        <a class="post-title">${title}</a>
+        <a class="post-title" target="_blank" href="${forumTopicUrl}${slug}/${id}">${title}</a>
 
         ${forumCategory(category_id)}
       </td>
