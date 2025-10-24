@@ -12,8 +12,9 @@ const spDefenseEl = document.getElementById("special-defense");
 const speedEl = document.getElementById("speed");
 
 searchBtnEl.addEventListener("click", function () {
-  var qiymat = inputEl.value.trim();
-  if (qiymat.toLowerCase() === "pyrolynx") {
+  const qiymat = inputEl.value.trim().toLowerCase();
+
+  if (qiymat === "pyrolynx") {
     nameEl.textContent = "PYROLYNX";
     idEl.textContent = "#1";
     weightEl.textContent = "Weight: 42";
@@ -24,8 +25,12 @@ searchBtnEl.addEventListener("click", function () {
     spAttackEl.textContent = "90";
     spDefenseEl.textContent = "55";
     speedEl.textContent = "100";
-  } else if (qiymat === "Red") {
-    alert("Creature not found");
+
+    const typeItem = document.createElement("p");
+    typeItem.textContent = "FIRE";
+    typeItem.style.color = "orange";
+    typeItem.style.fontWeight = "bold";
+    typesEl.appendChild(typeItem);
   } else {
     alert("Creature not found");
   }
