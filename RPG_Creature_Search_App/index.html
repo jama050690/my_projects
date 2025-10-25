@@ -13,17 +13,15 @@
         alt="Logo"
       />
       <h1>RPG Creature Search App</h1>
-
       <div class="container">
-        <form role="search" id="search-form">
+        <form rule="search" id="search-form">
           <label for="search-input">Search for Creature Name</label>
-          <input type="text" id="search-input" required />
-          <button type="button" id="search-button">Search</button>
+          <input name="" creature type="text " id="search-input" required />
+          <button id="search-button">Search</button>
         </form>
-
         <div class="output">
           <div class="top-container">
-            <div class="name-and-id">
+            <div class="name and id">
               <span id="creature-name"></span>
               <span id="creature-id"></span>
               <div class="size">
@@ -37,7 +35,6 @@
               <div id="special-description"></div>
             </div>
           </div>
-
           <div class="bottom-container">
             <table>
               <tbody>
@@ -46,7 +43,7 @@
                   <th>Stats</th>
                 </tr>
                 <tr>
-                  <td>HP:</td>
+                  <td>Hp:</td>
                   <td id="hp"></td>
                 </tr>
                 <tr>
@@ -66,7 +63,7 @@
                   <td id="special-defense"></td>
                 </tr>
                 <tr>
-                  <td>Speed:</td>
+                  <td>Speed</td>
                   <td id="speed" class="speed"></td>
                 </tr>
               </tbody>
@@ -75,7 +72,6 @@
         </div>
       </div>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>
