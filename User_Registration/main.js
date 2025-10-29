@@ -42,6 +42,7 @@ function add() {
     const user = JSON.parse(localStorage.getItem(emailText));
     if (user && user.password === passwordText) {
       alert("Login muvaffaqiyatli amalga oshirildi!");
+      window.location.href = "../index.html";
     } else {
       let errMessage = "";
       if (user) {
