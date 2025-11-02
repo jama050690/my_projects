@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ol,
+ul {
+  list-style: none;
+}
+:root {
+  --bg: #fff;
+  --text-color: #202c36;
+}
+
+.dark_mode {
+  --bg: #202c36;
+  --bgc: #2b3945;
+  --text-color: #fff;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-color);
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1320px;
+}
+.nav {
+  padding-top: 15px;
+  padding-left: 81px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 48px;
+}
+.logo {
+  margin-right: 20px;
+  display: flex;
+  column-gap: 10px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+.region-select {
+  width: 200px;
+  height: 56px;
+  border-radius: 5px;
+  background: var(--bgc);
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.05);
+  border: none;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  padding: 0 15px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+.input {
+  border: none;
+  padding-left: 90px;
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.05);
+  background: var(--bg);
+  border-radius: 5px;
+  width: 480px;
+  height: 56px;
+  background-color: var(--bgc);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--text-color);
+}
+.form_inpt {
+  position: relative;
+  display: inline-block;
+}
+.form_inpt::before {
+  content: "";
+  position: absolute;
+  left: 50px;
+  top: 28px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url("./search.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+}
+
+.block {
+  width: 200px;
+  background-color: var(--bgc);
+}
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1320px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  column-gap: 75px;
+  row-gap: 75px;
+  padding-bottom: 45px;
+}
+.content {
+  max-width: 264px;
+  max-height: 336px;
+  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.03);
+  background: var(--bgc);
+}
+.flags {
+  width: 264px;
+  height: 160px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 24px;
+}
+.sub_title {
+  padding-left: 24px;
+  margin-bottom: 16px;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 144%;
+  color: var(--text-color);
+}
+.sub_text {
+  margin-left: 24px;
+  height: 64px;
+  margin-bottom: 46px;
+}
+.population,
+.continent,
+.capital {
+  font-size: 14px;
+  line-height: 114%;
+  margin-bottom: 8px;
+}
+.capital {
+  margin-bottom: 0;
+}
+.population {
+  font-variant-numeric: tabular-nums;
+}

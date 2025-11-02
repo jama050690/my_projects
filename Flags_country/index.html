@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Flags</title>
+  </head>
+  <body>
+    <header class="nav">
+      <h2 class="title">Where in the world?</h2>
+      <div class="logo">
+        <img src="./rasm.svg" alt="Logo" />
+        <p class="text">Dark Mode</p>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="navbar">
+          <form class="form_inpt">
+            <input
+              type="text"
+              class="input"
+              placeholder="Search for a country…"
+            />
+          </form>
+          <div class="block">
+            <select id="regionFilter" class="region-select"></select>
+          </div>
+        </div>
+        <div class="box"></div>
+        <div id="countries" class="countries-list"></div>
+      </div>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
