@@ -90,16 +90,6 @@ export const flags = [
     name: "Angola",
   },
   {
-    population: 14_728,
-    capital: "The Valley",
-    code: "ai",
-    continent: "North America",
-    flag_1x1: "https://flagicons.lipis.dev/flags/1x1/ai.svg",
-    flag_4x3: "https://flagicons.lipis.dev/flags/4x3/ai.svg",
-    iso: true,
-    name: "Anguilla",
-  },
-  {
     population: 27_500_000,
     capital: "Canberra",
     code: "au",
@@ -118,5 +108,16 @@ export const flags = [
     flag_4x3: "https://flagicons.lipis.dev/flags/4x3/br.svg",
     iso: true,
     name: "Brazil",
+  },
+
+  {
+    population: 331_893_745,
+    capital: "Washington",
+    code: "us",
+    continent: "North America",
+    flag_1x1: "https://flagicons.lipis.dev/flags/1x1/us.svg",
+    flag_4x3: "https://flagicons.lipis.dev/flags/4x3/us.svg",
+    iso: true,
+    name: "United States of America",
   },
 ];
