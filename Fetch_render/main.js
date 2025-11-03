@@ -12,7 +12,7 @@ async function loadUsers() {
 
     // Javobni tekshirish
     if (!response.ok) {
-      throw new Error("Serverdan noto‘g‘ri javob keldi!");
+      throw new Error("Serverdan noto'g'ri javob keldi!");
     }
 
     // JSON ma’lumotga o‘tkazamiz
