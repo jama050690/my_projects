@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Qur'on app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Qur'on</h1>
+        <p>Tinglang</p>
+      </div>
+      <div class="search-box">
+        <div class="search-controls">
+          <button id="showAllSurahs">Barcha suralar</button>
+          <button id="loadSurah">Suralarni ko'rsatish</button>
+          <input
+            id="surahInput"
+            type="number"
+            placeholder="...Sura raqami kiriting"
+          />
+        </div>
+      </div>
+      <div class="content-area">
+        <div class="surah-info">
+          <h2>Al-Faatiha - سُورَةُ ٱلْفَاتِحَةِ</h2>
+          <p>The Opening | 7 oyat | Makkiy</p>
+        </div>
+        <ul class="ayah-list"></ul>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
