@@ -1,0 +1,100 @@
+{
+  "userId": 1,
+  "id": 1,
+
+  "agenda": {
+    "UZ_word": "kun tartibi",
+    "RU_word": "повестка дня",
+    "EN": "The meeting agenda includes three main topics",
+    "UZ": "Uchrashuv kun tartibiga uchta asosiy mavzu kiritilgan",
+    "RU": "Повестка встречи включает три основные темы"
+  },
+
+  "train": {
+    "UZ_word": "malaka oshirmoq",
+    "RU_word": "обучать, повышать квалификацию",
+    "EN": "The company will train new employees next week",
+    "UZ": "Kompaniya kelasi hafta yangi xodimlarning malakasini oshiradi",
+    "RU": "Компания будет обучать новых сотрудников на следующей неделе"
+  },
+
+  "improve": {
+    "UZ_word": "yaxshilash",
+    "RU_word": "улучшать",
+    "EN": "She wants to improve her English speaking skills",
+    "UZ": "U ingliz tilida gapirish ko‘nikmalarini yaxshilamoqchi",
+    "RU": "Она хочет улучшить свои навыки разговорного английского"
+  },
+
+  "skill": {
+    "UZ_word": "ko‘nikma",
+    "RU_word": "навык",
+    "EN": "Programming is an important skill for software engineers",
+    "UZ": "Dasturlash — dasturiy ta’minot muhandislari uchun muhim ko‘nikma",
+    "RU": "Программирование — важный навык для инженеров-программистов"
+  },
+
+  "session": {
+    "UZ_word": "mashg‘ulot",
+    "RU_word": "занятие, сессия",
+    "EN": "The training session starts at 9 a.m",
+    "UZ": "Mashg‘ulot ertalab soat 9 da boshlanadi",
+    "RU": "Учебная сессия начинается в 9 утра"
+  },
+
+  "representative": {
+    "UZ_word": "vakil",
+    "RU_word": "представитель",
+    "EN": "A company representative attended the conference",
+    "UZ": "Kompaniya vakili konferensiyada ishtirok etdi",
+    "RU": "Представитель компании принял участие в конференции"
+  },
+
+  "explain": {
+    "UZ_word": "tushuntirmoq",
+    "RU_word": "объяснять",
+    "EN": "The teacher explained the problem clearly",
+    "UZ": "O‘qituvchi muammoni aniq tushuntirdi",
+    "RU": "Учитель ясно объяснил проблему"
+  },
+
+  "effort": {
+    "UZ_word": "urinish, sa’y-harakat",
+    "RU_word": "усилие",
+    "EN": "He made a great effort to finish the project on time",
+    "UZ": "U loyihani o‘z vaqtida tugatish uchun katta sa’y-harakat qildi",
+    "RU": "Он приложил большие усилия, чтобы завершить проект вовремя"
+  },
+
+  "noticeable": {
+    "UZ_word": "sezilarli",
+    "RU_word": "заметный",
+    "EN": "There is a noticeable improvement in her performance",
+    "UZ": "Uning natijalarida sezilarli yaxshilanish bor",
+    "RU": "В её результатах наблюдается заметное улучшение"
+  },
+
+  "meet": {
+    "UZ_word": "uchrashmoq",
+    "RU_word": "встречаться",
+    "EN": "We will meet our clients tomorrow",
+    "UZ": "Biz ertaga mijozlarimiz bilan uchrashamiz",
+    "RU": "Мы встретимся с нашими клиентами завтра"
+  },
+
+  "ensure": {
+    "UZ_word": "ta'minlamoq, kafolatlamoq",
+    "RU_word": "обеспечивать, гарантировать",
+    "EN": "Please ensure that the door is locked.",
+    "UZ": "Iltimos, eshik qulflanganiga amin bo‘ling.",
+    "RU": "Пожалуйста, убедитесь, что дверь заперта"
+  },
+
+  "success": {
+    "UZ_word": "muvaffaqiyat",
+    "RU_word": "успех",
+    "EN": "Hard work is the key to success.",
+    "UZ": "Qattiq mehnat muvaffaqiyatning kalitidir.",
+    "RU": "Тяжёлый труд — ключ к успеху"
+  }
+}
