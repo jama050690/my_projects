@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "ism": "Sardor",
+    "familiya": "Sunattulaye",
+    "yosh": 16,
+    "guruh": "N3",
+    "kurs": 1,
+    "ball": 88
+  },
+  {
+    "id": 2,
+    "ism": "Suhrob",
+    "familiya": "Amirov",
+    "yosh": 20,
+    "guruh": "N5",
+    "kurs": 1,
+    "ball": 90
+  },
+  {
+    "id": 3,
+    "ism": "O'lmasbek",
+    "familiya": "Ruziboyev",
+    "yosh": 26,
+    "guruh": "N6",
+    "kurs": 2,
+    "ball": 85
+  },
+  {
+    "id": 4,
+    "ism": "Samandar",
+    "familiya": "Hamroqulov",
+    "yosh": 23,
+    "guruh": "N4",
+    "kurs": 2,
+    "ball": 58
+  },
+  {
+    "id": 5,
+    "ism": "Gulnoza",
+    "familiya": "Urazboyeva",
+    "yosh": 20,
+    "guruh": "N4",
+    "kurs": 3,
+    "ball": 90
+  }
+]

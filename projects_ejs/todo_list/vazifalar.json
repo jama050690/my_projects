@@ -1,0 +1,29 @@
+[
+  {
+    "id": 2,
+    "sarlavha": "FrontEnda UI yozish",
+    "tavsif": "Header uchun CRUD va filter yaratish",
+    "status": "jarayonda",
+    "muhimlik": "yuqori",
+    "muddat": "2025-12-19",
+    "yaratilganVaqt": "2025-12-19T15:45:07.634Z"
+  },
+  {
+    "id": 3,
+    "sarlavha": "Mobileda app yozish",
+    "tavsif": "Appni tekshirish ",
+    "status": "tugallangan",
+    "muhimlik": "past",
+    "muddat": "2025-12-19",
+    "yaratilganVaqt": "2025-12-19T15:53:25.506Z"
+  },
+  {
+    "id": 4,
+    "sarlavha": "Backend API yozish",
+    "tavsif": "Todo uchun CRUD va filter endpointlarini yaratish",
+    "status": "yangi",
+    "muhimlik": "o'rta",
+    "muddat": "2025-12-19",
+    "yaratilganVaqt": "2025-12-19T16:02:51.411Z"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "ism": "O'lmasbek",
+    "familiya": "Ruziboyev",
+    "yosh": 23,
+    "guruh": "N4",
+    "kurs": 2,
+    "ball": 88
+  },
+  {
+    "ism": "Tolmas",
+    "familiya": "Urinov",
+    "yosh": 18,
+    "guruh": "N4",
+    "kurs": 1,
+    "ball": 86
+  },
+  {
+    "ism": "Suhrob",
+    "familiya": "Amirov",
+    "yosh": 20,
+    "guruh": "N4",
+    "kurs": 1,
+    "ball": 90
+  },
+  {
+    "ism": "Gulnoza",
+    "familiya": "Urazboyeva",
+    "yosh": 20,
+    "guruh": "N4",
+    "kurs": 3,
+    "ball": 90
+  },
+  {
+    "ism": "Sardor",
+    "familiya": "Sunattulaye",
+    "yosh": 16,
+    "guruh": "N4",
+    "kurs": 1,
+    "ball": 88
+  }
+]

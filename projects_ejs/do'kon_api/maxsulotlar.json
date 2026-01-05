@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "nomi": "Televizor",
+    "narx": 5000000,
+    "kategoriya": "elektronika",
+    "miqdor": 100,
+    "tavsif": "Samsung HD-Line"
+  },
+  {
+    "id": 2,
+    "nomi": "Hurmo",
+    "narx": 15000,
+    "kategoriya": "Oziq-ovqat",
+    "miqdor": 150,
+    "tavsif": "Hom hali yetilmagan"
+  },
+  {
+    "id": 3,
+    "nomi": "Koditsioner",
+    "narx": 5500000,
+    "kategoriya": "elektronika",
+    "miqdor": 60,
+    "tavsif": "Samsung Fresh_Air"
+  },
+  {
+    "id": 4,
+    "nomi": "Kir-moshina",
+    "narx": 3500000,
+    "kategoriya": "elektronika",
+    "miqdor": 90,
+    "tavsif": "Samsung clear-tech"
+  },
+  {
+    "id": 5,
+    "nomi": "Palto",
+    "narx": 500000,
+    "kategoriya": "kiyim-kechak",
+    "miqdor": 0,
+    "tavsif": "Ayiq mp'ynasidan",
+    "n": 9000000
+  },
+  {
+    "id": 6,
+    "nomi": "Banan",
+    "narx": 50000,
+    "kategoriya": "Oziq-ovqat",
+    "miqdor": 50,
+    "tavsif": "Portugaliaya"
+  }
+]
